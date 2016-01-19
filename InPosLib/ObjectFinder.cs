@@ -13,21 +13,23 @@ namespace InPosLib
         public bool found;
         public ObjectFinder(List<object> thelist, object theObj)
         {
-
-        
             searchThisList = thelist;
             typeToFind = theObj;
-        //public bool In()
-        //{
+            //var wtf = searchThisList(1)
+
             foreach (var item in searchThisList)
             {
                 if (item.GetType() == typeToFind.GetType())
-                    return true;
-             }
-            return false;
+                    found = true;
+
             }
-        }
             
-        
+        }
 
+            //public bool In()
+            //{
+            //    if (typeToFind.GetType() == typeof()) { }
+            //}
 
+        }
+}
