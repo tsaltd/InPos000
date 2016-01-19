@@ -19,7 +19,9 @@ namespace InPos000
 
             op.ProcessEmployees("sales");
 
-            ObjectFinder of = new ObjectFinder(op.objList, new Executive());
+            object objectToFind = new Executive();
+
+            ObjectFinder of = new ObjectFinder(op.objList, objectToFind);
             
 
 

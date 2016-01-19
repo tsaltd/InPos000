@@ -29,9 +29,5 @@ namespace InPosLib
         
         public float YTD_Sales { get; set; }
 
-        //public SalesPerson()
-        //{
-
-        //}
     }
 }
