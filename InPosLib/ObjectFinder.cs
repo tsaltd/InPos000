@@ -11,10 +11,12 @@ namespace InPosLib
         public List<object> searchThisList = new List<object>();
         public object typeToFind;
         public bool found;
-        public ObjectFinder(List<object> thelist, object theObj)
+        public ObjectFinder(List<object> thelist, string selector)
         {
             searchThisList = thelist;
-            typeToFind = theObj;
+            selectObjectType(selector);
+
+           // typeToFind = theObj;
             //var wtf = searchThisList(1)
         }
 
@@ -31,6 +33,29 @@ namespace InPosLib
                if (result != null) return true;
                return false;
             }
+            void selectObjectType(string selector)
+            {
+                object findClass = new object();
+
+
+                switch (selector)
+                {
+                    case "1":
+
+                        typeToFind = new Employee();
+
+                        break;
+                    case "2":
+
+                        typeToFind = new Executive();
+                        break;
+                    case "3":
+
+                        typeToFind = new SalesPerson();
+                        break;
+                }
+            } 
+
             
         }
 
