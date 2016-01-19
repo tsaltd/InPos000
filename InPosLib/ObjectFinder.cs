@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace InPosLib
 {
-    class ObjectFinder
+    public class ObjectFinder
     {
         public List<object> searchThisList = new List<object>();
         public object typeToFind;
         public bool found;
-        ObjectFinder(List<object> thelist, object theObj)
+        public ObjectFinder(List<object> thelist, object theObj)
         {
             searchThisList = thelist;
             typeToFind = theObj;
