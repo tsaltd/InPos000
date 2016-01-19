@@ -19,7 +19,13 @@ namespace InPos000
 
             op.ProcessEmployees("sales");
 
-            ObjectFinder of = new ObjectFinder(op.objList, new Executive());
+            //ObjectFinder of = new ObjectFinder(op.objList, new Employee());
+
+            ObjectFinder TestEmployee = new ObjectFinder(op.objList, new Executive());
+
+ 
+
+            bool yn = TestEmployee.In();
             
 
 
