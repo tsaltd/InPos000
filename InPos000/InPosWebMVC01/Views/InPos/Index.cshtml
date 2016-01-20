@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm())
+{
+    @*<select id="CategoryID" name="CategoryID">
+        <option value="1">Executive</option>
+        <option value="2">Sales Person</option>
+        <option value="3">Employee</option>
+    </select>*@
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h1 class="panel-title">Search for Products</h1>
+        </div>
+        <div class="panel-body">
+            <div class="form-group">
+                <select id="CategoryID" name="CategoryID">
+            <option value="1">Executive</option>
+            <option value="2">Sales Person</option>
+            <option value="3">Employee</option>
+        </select>
+
+
+            </div>
+        </div>
+        <div class="panel-footer">
+            <button id="btnSearch"
+                    class="btn btn-sm btn-primary"
+                    data-pdsa-action="search">
+                <i class="glyphicon glyphicon-search"></i>
+                &nbsp;Search
+            </button>
+            <button id="btnReset"
+                    class="btn btn-sm btn-primary"
+                    data-pdsa-action="resetsearch">
+                <i class="glyphicon glyphicon-share-alt"></i>
+                &nbsp;Reset
+            </button>
+        </div>
+    </div>
+   <!-- ** END SEARCH AREA ** -->
+
+
+
+
+
+}
