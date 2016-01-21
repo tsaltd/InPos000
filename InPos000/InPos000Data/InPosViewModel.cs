@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace InPos000Data
 {
-    class InPosViewModel
+    public class InPosViewModel
     {
         public string me{ get; set; }
     }
