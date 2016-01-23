@@ -43,6 +43,12 @@
     <Compile Include="InPosViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\InPosLib\InPosLib.csproj">
+      <Project>{ceef47eb-0e24-4b68-ad3c-9f52ba714ee9}</Project>
+      <Name>InPosLib</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
