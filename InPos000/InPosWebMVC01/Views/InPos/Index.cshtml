@@ -1,25 +1,42 @@
 ﻿@using InPos000Data
-@model InPos000Data.InPosViewModel
+@model InPosViewModel
 
-@{ViewBag.Title = "Index";
+@{ViewBag.Title = "List Object Analysis";
 Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Object Analysis</h2>
 
 
 @using (Html.BeginForm())
 {
     <div class="panel panel-primary ">
         <div class="panel-heading">
-            <h1 class="panel-title">Search for Products</h1>
+            <h1 class="panel-title">THIS IS THE TITLE OF THE PANEL</h1>
         </div>
-        <div>
+
+        <div class="container">
             <br/>
-            @Html.DropDownList("MyType",
-                EnumHelper.GetSelectList(typeof (InPosViewModel.EmployeeType)),
-                "Select My Type",
-                new {@class = "form-control"})
+            <div clas="row">
+                <div class="col-md-1">.col-md-1</div>
+                <div class="col-md-4">
+                    @Html.DropDownList("Select an Object to Analyze",
+                        EnumHelper.GetSelectList(typeof (InPosViewModel.EmployeeType)),
+                        "Select An Object To Analyze",
+                        new {@class = "form-control"})
+                </div>
+                <div class="col-md-3">
+                    col-md-3
+                </div>
+                <div class="col-md-3">
+                    .col-md-3
+                </div>
+                <div class="col-md-1">
+                    .col-md-1
+                </div>
+            </div>
+            <br />
+
         </div>
         <div class="panel-footer">
             <button id="btnSearch"
@@ -38,4 +55,4 @@ Layout = "~/Views/Shared/_Layout.cshtml";
     </div>
 }
 <!-- ** END SEARCH AREA ** -->
-}
+
