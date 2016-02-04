@@ -1,6 +1,6 @@
 ﻿
 @using InPos000Data
-@model InPos000Data.InPosViewModel
+@model InPosViewModel
 @{
     ViewBag.Title = "Home Page";
 }
@@ -14,28 +14,28 @@
             <h1 class="panel-title">THIS IS THE TITLE OF THE PANEL</h1>
         </div>
         <div class="container">
-            <br />
+            <div class="well well-lg">
             <div class="row">
-                <div class="col-md-1">.col-md-1</div>
-                <div class="col-md-3"
+                <div class="col-md-1"></div>
+                <div class="col-md-3">
                     @Html.DropDownList("Select an Object to Analyze",
                         EnumHelper.GetSelectList(typeof (InPosViewModel.EmployeeType)),
-                        "Select An Object To Analyze", new {@class = "form-control"})
+                        "Select An Object To Analyze", new {@class = "form-control input-sm fl"})
                 </div>
-                <div class="well well-lg">
-                    <div class="col-md-1">col-md-1</div>
-                    @*<div class="text-center col-md-5">*@
-                        <div class="col-md-5">
-                            <div class="checkbox-inline">
-                                <input class="fl" type="checkbox">Count Type
-                            </div>
-                            <div class="checkbox-inline">
-                                <input class="fl" type="checkbox"> Find Type
-                            </div>
-                        </div>
-                        <div class="col-md-2">.col - md - 2</div>
+                <div class="col-md-1"></div>
+                <div class="col-md-5">
+                    <div class="checkbox-inline">
+                        <input class="fl" type="checkbox">Count Type
+                    </div>
+                    <div class="checkbox-inline">
+                        <input class="fl" type="checkbox"> Find Type
                     </div>
                 </div>
+                <div class="col-md-2"></div>
+
             </div>
+
         </div>
+        </div>
+    </div>
 }
