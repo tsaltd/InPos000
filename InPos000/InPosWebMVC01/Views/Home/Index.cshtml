@@ -9,33 +9,39 @@
 
 @using (Html.BeginForm())
 {
-    <div class="panel panel-primary ">
+    <div class="panel panel-primary">
         <div class="panel-heading">
             <h1 class="panel-title">THIS IS THE TITLE OF THE PANEL</h1>
         </div>
-        <div class="container">
+    <div class="panel-body">
+        @*<div class="wellcls well well-lg">*@
             <div class="well well-lg">
-            <div class="row">
-                <div class="col-md-1"></div>
-                <div class="col-md-3">
-                    @Html.DropDownList("Select an Object to Analyze",
-                        EnumHelper.GetSelectList(typeof (InPosViewModel.EmployeeType)),
-                        "Select An Object To Analyze", new {@class = "form-control input-sm fl"})
-                </div>
-                <div class="col-md-1"></div>
-                <div class="col-md-5">
-                    <div class="checkbox-inline">
-                        <input class="fl" type="checkbox">Count Type
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-3">
+                            @Html.DropDownList("Select an Object to Analyze",
+                            EnumHelper.GetSelectList(typeof (InPosViewModel.EmployeeType)),
+                            "Select An Object To Analyze", new {@class = "form-control input-sm fl"})
+                        </div>
+                        <div class="col-md-1"></div>
+                        <div class="col-md-5">
+                            <div class="checkbox-inline">
+                                @*<input class="fl" type="checkbox" >Count Type*@
+                                <input type="checkbox">Count Type
+                            </div>
+                            <div class="checkbox-inline">
+                                <input class="fl" type="checkbox">Find Type
+                            </div>
+                        </div>
+                        @*<div class="col-md-2"></div>*@
+
                     </div>
-                    <div class="checkbox-inline">
-                        <input class="fl" type="checkbox"> Find Type
-                    </div>
+
                 </div>
-                <div class="col-md-2"></div>
+
 
             </div>
-
-        </div>
-        </div>
     </div>
+  </div>
 }

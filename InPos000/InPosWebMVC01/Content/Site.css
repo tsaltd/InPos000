@@ -27,4 +27,8 @@ textarea {
         float :none;
 
     }
- }
+.wellcls {
+    margin-bottom: 0px;
+    border-bottom: none;
+}
+
