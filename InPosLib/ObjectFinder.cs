@@ -1,63 +1,51 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace InPosLib
 {
     public class ObjectFinder
     {
-        public List<object> searchThisList = new List<object>();
-        public object typeToFind;
-        public bool found;
-        public ObjectFinder(List<object> thelist, string selector)
+        public List<object> searchThisList;
+        public object TypeToFind;
+        public bool Found { get; set; }
+
+        public ObjectFinder(List<object> thelist, string selector, bool found)
         {
             searchThisList = thelist;
-            selectObjectType(selector);
-
-           // typeToFind = theObj;
-            //var wtf = searchThisList(1)
+            Found = found;
+            SelectObjectType(selector);
         }
 
-            //foreach (var item in searchThisList)
-            //{
-            //    if (item.GetType() == typeToFind.GetType())
-            //        found = true;
-
-            //}
-
-            public bool In()
+        public bool In()
             {
-               object result = searchThisList.Find(x => x.GetType() == typeToFind.GetType());
+               object result = searchThisList.Find(x => x.GetType() == TypeToFind.GetType());
                if (result != null) return true;
                return false;
             }
-            void selectObjectType(string selector)
+
+        public void SelectObjectType(string selector)
             {
-                object findClass = new object();
+                // ReSharper disable once ObjectCreationAsStatement
+                //new object();
 
 
                 switch (selector)
                 {
                     case "1":
 
-                        typeToFind = new Employee();
+                        TypeToFind = new Employee();
 
                         break;
                     case "2":
 
-                        typeToFind = new Executive();
+                        TypeToFind = new Executive();
                         break;
                     case "3":
 
-                        typeToFind = new SalesPerson();
+                        TypeToFind = new SalesPerson();
                         break;
                 }
-            } 
-
-            
-        }
+            }
+    }
 
             
         }

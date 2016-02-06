@@ -27,11 +27,6 @@ namespace InPos000
 
 
             Console.ReadKey();
-
-
-
-
-
                        
         }
 
@@ -41,7 +36,9 @@ namespace InPos000
            // selectObjectType(selector);
             List<Object> ObjectsToAnalyze = new List<object>();
 
-            objectProcessor op = new objectProcessor();
+            InPosLib.ObjectProcessor op  = new ObjectProcessor();
+
+          // objectProcessor op = new objectProcessor();
 
             op.ProcessEmployees("exec");
 
@@ -49,8 +46,7 @@ namespace InPos000
 
             //ObjectFinder of = new ObjectFinder(op.objList, new Employee());
 
-            ObjectFinder TestEmployee = new ObjectFinder(op.objList, selector);
-
+            ObjectFinder TestEmployee = new ObjectFinder(op.objList, selector, true);
 
 
             bool yn = TestEmployee.In();

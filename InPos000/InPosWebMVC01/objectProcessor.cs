@@ -1,14 +1,15 @@
 ﻿using System.Collections.Generic;
+using InPosLib;
 
-namespace InPosLib
+namespace InPosWebMVC01
 {
     public class ObjectProcessor
     {
         public List<object> objList = new List<object>();
 
-        public SalesPerson _spTemplate;
+        private SalesPerson _spTemplate;
 
-        public Executive _exTemplate;
+        private Executive _exTemplate;
 
         public ObjectProcessor(SalesPerson spTemplate, Executive exTemplate)
         {
@@ -16,10 +17,6 @@ namespace InPosLib
             _exTemplate = exTemplate;
         }
 
-        public ObjectProcessor()
-        {
-            
-        }
         public SalesPerson SpTemplate
         {
             get { return _spTemplate; }

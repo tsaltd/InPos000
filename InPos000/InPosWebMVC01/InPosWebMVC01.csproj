@@ -115,9 +115,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="objectProcessor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="..\..\..\SaveIt.html" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
@@ -165,6 +167,10 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\InPosLib\InPosLib.csproj">
+      <Project>{ceef47eb-0e24-4b68-ad3c-9f52ba714ee9}</Project>
+      <Name>InPosLib</Name>
+    </ProjectReference>
     <ProjectReference Include="..\InPos000Data\InPos000Data.csproj">
       <Project>{a0829840-40ec-4f6b-a364-08d080d943b8}</Project>
       <Name>InPos000Data</Name>
