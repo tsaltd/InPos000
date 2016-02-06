@@ -13,18 +13,15 @@
             <h1 class="panel-title">THIS IS THE TITLE OF THE PANEL</h1>
         </div>
         <div class="panel-body">
-            @*<div class="wellcls well well-lg">*@
             <div class="well well-lg">
-                <div class="container">
+                <div class="container-fluid">
                     <div class="row">
-                        @*<div class="col-md-1 col-xs-1"></div>*@
-                        <div class="col-sm-4 col-xs-4">
+                        <div class="col-md-5 col-xs-5" align="left">
                             @Html.DropDownList("Select an Object to Analyze",
                                 EnumHelper.GetSelectList(typeof(InPosViewModel.EmployeeType)),
                                 "Select Object To Analyze", new { @class = "form-control input-sm fl" })
                         </div>
-                        @*<div class="col-xs-1"></div>*@
-                        <div class="col-sm-3 col-xs-3">
+                        <div class="col-md-3 col-xs-3" align="left">
                             <label class="radio-inline">
                                 <input class="fl" type="radio" name="director">Find
                             </label>
@@ -32,17 +29,15 @@
                                 <input class="fl" type="radio" name="director">Count
                             </label>
                         </div>
-                        <div class="col-sm-1 col-xs-1"></div>
-                        <div class="col-sm-2 col-xs-2">
-                            <button id="btnAnalyze" class=" btn-sm btn-primary">Analyze</button>
+                        <div class="col-md-4 col-xs-4" align="right">
+                            <button id="btnAnalyze" class="btn-sm btn-primary">Analyze</button>
                         </div>
-                        <div class="col-sm-2 col-xs-2"></div>
                     </div>
                 </div>
             </div>
         </div>
         <script>
-           // $("#btnAnalyze").prop('disabled', true);
+           $("#btnAnalyze").prop('disabled', true);
             //On document load
             //$(function () {
             //    //Set button disabled
