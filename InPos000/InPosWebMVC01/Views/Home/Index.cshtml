@@ -14,36 +14,38 @@
         </div>
         <div class="panel-body">
             <div class="well well-lg">
-                <div class="container-fluid">
+                <div class="container">
                     <div class="row">
-                        <div class="col-md-5 col-xs-5" align="left">
-                            @Html.DropDownList("Select an Object to Analyze",
-                                EnumHelper.GetSelectList(typeof(InPosViewModel.EmployeeType)),
-                                "Select Object To Analyze", new { @class = "form-control input-sm fl" })
+                        <span class="input-group col-sm-3 col-sm-offset-1 col-md-2 col-md-offset-2" role="group">
+                            <span class="input-group-addon">
+                                <input name="cat" type="radio">&nbsp;Find
+                            </span>
+                            <span class="input-group-addon">
+                                <input name="cat" type="radio">&nbsp;Count
+                            </span>
+                        </span>
+                        <!-- /input-group -->
+                        @*</div>*@
+
+                        <div class="col-md-2 col-sm-3 col-sm-offset-1 form-group">
+                            @Html.DropDownListFor(m => m.EmployeeClasses, EnumHelper.GetSelectList(typeof(InPosViewModel.EmployeeType)), "Select an Object to Analyze", new { @class = "form-control input-sm fl" })
                         </div>
-                        <div class="col-md-3 col-xs-3" align="left">
-                            <label class="radio-inline">
-                                <input class="fl" type="radio" name="director">Find
-                            </label>
-                            <label class="radio-inline">
-                                <input class="fl" type="radio" name="director">Count
-                            </label>
+                        <div class="col-md-2 col-sm-offset-1 col-sm-2 form-group">
+                            <input type="submit" id="btnAnalyze" class="btn-sm" value="Analyze">
                         </div>
-                        <div class="col-md-4 col-xs-4" align="right">
-                            <button id="btnAnalyze" class="btn-sm btn-primary">Analyze</button>
-                        </div>
+                        <div class="col-md-4 col-sm-1"></div>
                     </div>
                 </div>
             </div>
         </div>
         <script>
-           $("#btnAnalyze").prop('disabled', true);
+            $("#btnAnalyze").prop('disabled', true);
             //On document load
             //$(function () {
             //    //Set button disabled
             //    //$("input[type=submit]").attr("disabled", "disabled");
             //    $("#btnAnalyze").attr("disabled", "disabled")})
-                
+
             ////    //Append a change event listener to you inputs
             ////    $('input').change(function () {
             ////        //Validate your form here, example:
@@ -60,6 +62,5 @@
 
 
         </script>
-
     </div>
 }
