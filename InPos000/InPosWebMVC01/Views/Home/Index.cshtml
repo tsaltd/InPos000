@@ -16,51 +16,35 @@
             <div class="well well-lg">
                 <div class="container">
                     <div class="row">
-                        <span class="input-group col-sm-3 col-sm-offset-1 col-md-2 col-md-offset-2" role="group">
-                            <span class="input-group-addon">
-                                <input name="cat" type="radio">&nbsp;Find
+                        <span class="input-group
+                            col-xs-12 col-xs-offset-6
+                            col-sm-4
+                            col-md-4
+                            text-center" 
+                            role="group">
+                        <span class="input-group-addon">
+                                <input name="cat" type="radio">&nbsp;Fin
                             </span>
-                            <span class="input-group-addon">
+                        <span class="input-group-addon">
                                 <input name="cat" type="radio">&nbsp;Count
                             </span>
                         </span>
-                        <!-- /input-group -->
-                        @*</div>*@
-
-                        <div class="col-md-2 col-sm-3 col-sm-offset-1 form-group">
-                            @Html.DropDownListFor(m => m.EmployeeClasses, EnumHelper.GetSelectList(typeof(InPosViewModel.EmployeeType)), "Select an Object to Analyze", new { @class = "form-control input-sm fl" })
+                        <div class="col-xs-12 col-xs-offset-8
+                                col-sm-4 col-sm-offset-1
+                                col-md-4 col-md-offset-1
+                             form-group text-center">
+                            @Html.DropDownListFor(m => m.EmployeeClasses, EnumHelper.GetSelectList(typeof(InPosViewModel.EmployeeType)), "Select an Object to Analyze", new { @class = "form-control" })
                         </div>
-                        <div class="col-md-2 col-sm-offset-1 col-sm-2 form-group">
+                        <div class="col-xs-12 col-xs-offset-6
+                        col-sm-offset-1 col-sm-2
+                        col-md-offset-1 col-md-2
+                       form-group text-center">
                             <input type="submit" id="btnAnalyze" class="btn-sm" value="Analyze">
                         </div>
-                        <div class="col-md-4 col-sm-1"></div>
                     </div>
                 </div>
             </div>
         </div>
-        <script>
-            $("#btnAnalyze").prop('disabled', true);
-            //On document load
-            //$(function () {
-            //    //Set button disabled
-            //    //$("input[type=submit]").attr("disabled", "disabled");
-            //    $("#btnAnalyze").attr("disabled", "disabled")})
-
-            ////    //Append a change event listener to you inputs
-            ////    $('input').change(function () {
-            ////        //Validate your form here, example:
-            ////        var validated = true;
-            ////        if ($('#nome').val().length === 0) validated = false;
-
-            ////        //If form is validated enable form
-            ////        if (validated) $("input[type=submit]").removeAttr("disabled");
-            ////    });
-
-            ////    //Trigger change function once to check if the form is validated on page load
-            ////    $('input:first').trigger('change');
-            ////})
-
-
-        </script>
+       
     </div>
 }
